@@ -7,11 +7,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01_CopyConstructorAndAssign
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01Lab_DynamicMemory", "01Lab_DynamicMemory\01Lab_DynamicMemory.vcxproj", "{B8C73E7F-3FE0-4D16-855A-B05B8B36B882}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleDynamicMemory", "SimpleDynamicMemory\SimpleDynamicMemory.vcxproj", "{EBDE45EF-E708-4A15-BA4A-56B021610BF5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_SimpleDynamicMemory", "SimpleDynamicMemory\SimpleDynamicMemory.vcxproj", "{EBDE45EF-E708-4A15-BA4A-56B021610BF5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleCopyAndSwap", "SimpleCopyAndSwap\SimpleCopyAndSwap.vcxproj", "{ACAA533E-5229-48AA-A755-38D31856E8AB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_SimpleCopyAndSwap", "SimpleCopyAndSwap\SimpleCopyAndSwap.vcxproj", "{ACAA533E-5229-48AA-A755-38D31856E8AB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleSmartPointers", "SimpleSmartPointers\SimpleSmartPointers.vcxproj", "{7B15E04D-F287-44F0-B5E9-B3B60EB394F3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_SimpleSmartPointers", "SimpleSmartPointers\SimpleSmartPointers.vcxproj", "{7B15E04D-F287-44F0-B5E9-B3B60EB394F3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_InsertionOperatorPolymorphism", "03_InsertionOperatorPolymorphism\03_InsertionOperatorPolymorphism.vcxproj", "{9AB2F147-27FE-40E6-9B03-0250C30439D5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_DestructorExample", "03_DestructorExample\03_DestructorExample.vcxproj", "{8473CE48-596E-423B-B8A2-001B51E09B3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +65,22 @@ Global
 		{7B15E04D-F287-44F0-B5E9-B3B60EB394F3}.Release|x64.Build.0 = Release|x64
 		{7B15E04D-F287-44F0-B5E9-B3B60EB394F3}.Release|x86.ActiveCfg = Release|Win32
 		{7B15E04D-F287-44F0-B5E9-B3B60EB394F3}.Release|x86.Build.0 = Release|Win32
+		{9AB2F147-27FE-40E6-9B03-0250C30439D5}.Debug|x64.ActiveCfg = Debug|x64
+		{9AB2F147-27FE-40E6-9B03-0250C30439D5}.Debug|x64.Build.0 = Debug|x64
+		{9AB2F147-27FE-40E6-9B03-0250C30439D5}.Debug|x86.ActiveCfg = Debug|Win32
+		{9AB2F147-27FE-40E6-9B03-0250C30439D5}.Debug|x86.Build.0 = Debug|Win32
+		{9AB2F147-27FE-40E6-9B03-0250C30439D5}.Release|x64.ActiveCfg = Release|x64
+		{9AB2F147-27FE-40E6-9B03-0250C30439D5}.Release|x64.Build.0 = Release|x64
+		{9AB2F147-27FE-40E6-9B03-0250C30439D5}.Release|x86.ActiveCfg = Release|Win32
+		{9AB2F147-27FE-40E6-9B03-0250C30439D5}.Release|x86.Build.0 = Release|Win32
+		{8473CE48-596E-423B-B8A2-001B51E09B3F}.Debug|x64.ActiveCfg = Debug|x64
+		{8473CE48-596E-423B-B8A2-001B51E09B3F}.Debug|x64.Build.0 = Debug|x64
+		{8473CE48-596E-423B-B8A2-001B51E09B3F}.Debug|x86.ActiveCfg = Debug|Win32
+		{8473CE48-596E-423B-B8A2-001B51E09B3F}.Debug|x86.Build.0 = Debug|Win32
+		{8473CE48-596E-423B-B8A2-001B51E09B3F}.Release|x64.ActiveCfg = Release|x64
+		{8473CE48-596E-423B-B8A2-001B51E09B3F}.Release|x64.Build.0 = Release|x64
+		{8473CE48-596E-423B-B8A2-001B51E09B3F}.Release|x86.ActiveCfg = Release|Win32
+		{8473CE48-596E-423B-B8A2-001B51E09B3F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

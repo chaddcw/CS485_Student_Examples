@@ -1,5 +1,11 @@
 # CS485_Student_Examples
 
+## How can a student keep their own personal fork in sync with this repository ##
+* You can follow the workflow below and use your desktop computer
+  * This is best if you already have changes in your personal fork
+* You can also follow [these slides] (http://zeus.cs.pacificu.edu/chadd/cs485s17/GitHub_MergeBackToFork.pdf) to make a pull request from the cs485s17/CS485_Student_Examples repository back to your own personal fork.
+  * This is best if you have no changes in your personal fork
+
 ## How CS 485 Students should use this repository ##
 
 * Fork this repository to your personal user account - this creates a **public** repository on your account.
