@@ -1,0 +1,38 @@
+SpaceTiger.cpp
+
+class SpaceTiger	size(36):
+	+---
+ 0	| +--- (base class tiger)
+ 0	| | +--- (base class cat)
+ 0	| | | +--- (base class animal)
+ 0	| | | | {vfptr}
+ 4	| | | | mWeight
+ 8	| | | | mHeight
+	| | | +---
+12	| | | mWeight
+16	| | | mTeeth
+	| | +---
+20	| | mStripes
+	| +---
+24	| +--- (base class SpaceCreature)
+24	| | {vfptr}
+28	| | mOxygen
+	| +---
+32	| mSpaceStripes
+	+---
+
+SpaceTiger::$vftable@tiger@:
+	| &SpaceTiger_meta
+	|  0
+ 0	| &animal::eat 
+ 1	| &cat::makeSound 
+ 2	| &tiger::getWeight2 
+ 3	| &SpaceTiger::hi 
+ 4	| &cat::getTeeth 
+
+SpaceTiger::$vftable@SpaceCreature@:
+	| -24
+ 0	| &SpaceTiger::useOxygen 
+
+SpaceTiger::useOxygen this adjustor: 24
+SpaceTiger::hi this adjustor: 0

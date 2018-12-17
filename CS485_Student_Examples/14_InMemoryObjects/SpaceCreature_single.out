@@ -1,0 +1,14 @@
+SpaceCreature.cpp
+
+class SpaceCreature	size(8):
+	+---
+ 0	| {vfptr}
+ 4	| mOxygen
+	+---
+
+SpaceCreature::$vftable@:
+	| &SpaceCreature_meta
+	|  0
+ 0	| &SpaceCreature::useOxygen 
+
+SpaceCreature::useOxygen this adjustor: 0

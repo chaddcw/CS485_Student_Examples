@@ -12,7 +12,8 @@
 //***************************************************************************
 // Function:    operator<<
 //
-// Description: Output the Child to the stream. First call the Parent's <<
+// Description: Output the Child to the stream. Call print to resolve to
+//              subclass correctly
 //
 // Parameters:  rcOut - the stream to write to
 //              rcData - the data to write to the stream
@@ -22,8 +23,7 @@
 
 std::ostream& operator<< (std::ostream& rcOut, const Child &rcData)
 {
-  rcOut << dynamic_cast<const Parent&> (rcData);
-  rcOut << "#" << rcData.mCharVal << "#";
+  rcData.print (rcOut);
   return rcOut;
 }
 
@@ -39,6 +39,7 @@ std::ostream& operator<< (std::ostream& rcOut, const Child &rcData)
 
 void Child::print (std::ostream& rcOut) const
 {
-  rcOut << *this;
+  Parent::print (rcOut);
+  rcOut << "#" << mCharVal << "#";
 }
 

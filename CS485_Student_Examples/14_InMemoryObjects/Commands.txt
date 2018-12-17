@@ -1,0 +1,18 @@
+cl.exe /c /d1reportSingleClassLayoutcat cat.cpp > cat_single.out
+
+cl.exe /c /d1reportSingleClassLayoutanimal animal.cpp > animal_single.out
+
+cl.exe /c /d1reportSingleClassLayouttiger tiger.cpp > tiger_single.out
+
+cl.exe /c /d1reportSingleClassLayoutSpaceCreature SpaceCreature.cpp > SpaceCreature_single.out
+
+cl.exe /c /d1reportSingleClassLayoutSpaceTiger SpaceTiger.cpp > SpaceTiger_single.out
+
+cl.exe  /c /FAcs main.cpp
+
+cl.exe  /c /FAcs animal.cpp
+
+cl.exe  /c /FAcs SpaceTiger.cpp
+
+cl.exe  /c /FAcs tiger.cpp
+

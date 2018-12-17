@@ -1,0 +1,45 @@
+cat.cpp
+
+class _s__RTTICompleteObjectLocator	size(20):
+	+---
+ 0	| signature
+ 4	| offset
+ 8	| cdOffset
+12	| pTypeDescriptor
+16	| pClassDescriptor
+	+---
+
+class __vc_attributes::atl::implements_categoryAttribute	size(4):
+	+---
+ 0	| value
+	+---
+
+class __vc_attributes::atl::requires_categoryAttribute	size(4):
+	+---
+ 0	| value
+	+---
+
+class cat	size(20):
+	+---
+ 0	| +--- (base class animal)
+ 0	| | {vfptr}
+ 4	| | mWeight
+ 8	| | mHeight
+	| +---
+12	| mWeight
+16	| mTeeth
+	+---
+
+cat::$vftable@:
+	| &cat_meta
+	|  0
+ 0	| &animal::eat 
+ 1	| &cat::makeSound 
+ 2	| &cat::getWeight2 
+ 3	| &cat::hi 
+ 4	| &cat::getTeeth 
+
+cat::makeSound this adjustor: 0
+cat::getWeight2 this adjustor: 0
+cat::hi this adjustor: 0
+cat::getTeeth this adjustor: 0

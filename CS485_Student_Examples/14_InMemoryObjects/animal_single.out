@@ -1,0 +1,21 @@
+animal.cpp
+
+class animal	size(12):
+	+---
+ 0	| {vfptr}
+ 4	| mWeight
+ 8	| mHeight
+	+---
+
+animal::$vftable@:
+	| &animal_meta
+	|  0
+ 0	| &animal::eat 
+ 1	| &animal::makeSound 
+ 2	| &animal::getWeight2 
+ 3	| &animal::hi 
+
+animal::eat this adjustor: 0
+animal::makeSound this adjustor: 0
+animal::getWeight2 this adjustor: 0
+animal::hi this adjustor: 0

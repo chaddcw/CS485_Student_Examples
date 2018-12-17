@@ -1,0 +1,27 @@
+tiger.cpp
+
+class tiger	size(24):
+	+---
+ 0	| +--- (base class cat)
+ 0	| | +--- (base class animal)
+ 0	| | | {vfptr}
+ 4	| | | mWeight
+ 8	| | | mHeight
+	| | +---
+12	| | mWeight
+16	| | mTeeth
+	| +---
+20	| mStripes
+	+---
+
+tiger::$vftable@:
+	| &tiger_meta
+	|  0
+ 0	| &cat::makeSound 
+ 1	| &tiger::getWeight2 
+ 2	| &tiger::hi 
+ 3	| &animal::eat 
+ 4	| &cat::getTeeth 
+
+tiger::getWeight2 this adjustor: 0
+tiger::hi this adjustor: 0

@@ -22,7 +22,7 @@
 
 std::ostream& operator<< (std::ostream& rcOut, const Parent &rcData)
 {
-  rcOut << ">" <<rcData.mIntVal << "<";
+  rcData.print (rcOut);
   return rcOut;
 }
 
@@ -37,5 +37,5 @@ std::ostream& operator<< (std::ostream& rcOut, const Parent &rcData)
 //***************************************************************************
 void Parent::print (std::ostream& rcOut) const
 {
-  rcOut << *this;
+  rcOut << ">" << mIntVal << "<";
 }
