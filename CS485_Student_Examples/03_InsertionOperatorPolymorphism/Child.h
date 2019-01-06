@@ -22,7 +22,7 @@ public:
 
   virtual void print (std::ostream& rcOut) const override;
 
-  friend std::ostream& operator<< (std::ostream& rcOut, const Child &rcData);
+  //friend std::ostream& operator<< (std::ostream& rcOut, const Child &rcData);
 
 private:
   char mCharVal;

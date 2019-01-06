@@ -21,11 +21,11 @@
 // Returned:    the stream written to
 //***************************************************************************
 
-std::ostream& operator<< (std::ostream& rcOut, const Child &rcData)
-{
-  rcData.print (rcOut);
-  return rcOut;
-}
+//std::ostream& operator<< (std::ostream& rcOut, const Child &rcData)
+//{
+//  rcData.print (rcOut);
+//  return rcOut;
+//}
 
 //***************************************************************************
 // Function:    print
