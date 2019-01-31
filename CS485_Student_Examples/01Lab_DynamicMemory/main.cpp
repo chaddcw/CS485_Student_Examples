@@ -7,15 +7,12 @@
 // Purpose:    Practice using raw pointers
 //***************************************************************************
 
-#define MEM_DEBUG
-// #include "mem_debug.h"
 
 #include <iostream>
 #include "PacString.h"
 
 int main ()
 {
-//  _CrtSetDbgFlag (_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
   PacString s1 = "Hello!";
 
@@ -24,7 +21,7 @@ int main ()
   PacString s2 ("World");
   std::cout << "s2: " << s2 << std::endl;
 
-  PacString s3;
+	PacString s3;
 
   s3 = s1 + s2;
 
