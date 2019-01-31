@@ -3,7 +3,7 @@
 ## How can a student keep their own personal fork in sync with this repository ##
 * You can follow the workflow below and use your desktop computer
   * This is best if you already have changes in your personal fork
-* You can also follow [these slides] (http://zeus.cs.pacificu.edu/chadd/cs485s17/GitHub_MergeBackToFork.pdf) to make a pull request from the cs485s17/CS485_Student_Examples repository back to your own personal fork.
+* You can also follow [these slides] (http://zeus.cs.pacificu.edu/chadd/cs485s17/GitHub_MergeBackToFork.pdf) to make a pull request from the chaddcw/CS485_Student_Examples repository back to your own personal fork.
   * This is best if you have no changes in your personal fork
 
 ## How CS 485 Students should use this repository ##
@@ -12,12 +12,12 @@
 * Clone this repository into Visual Studio. 
   * Open Visual Studio. Do not open a Project or Solution.
   * Team Explorer | Connect | Clone
-  * URL: https://github.com/USERNAME/CS485_Student_Examples.git
+  * URL: https://gitlab.com/YOUR_USERNAME/cs485_student_examples.git
   * Clone
   * Team Explorer | Repository Settings
   * Remotes | Add
     * Name: upstream
-    * Fetch: https://github.com/cs485s17/CS485_Student_Examples.git
+    * Fetch: https://gitlab.com/chaddcw/cs485_student_examples.git
     * Save
   * Team Explorer | Projects | Manage Connections 
     * Double click the correct Git Repository
@@ -43,7 +43,7 @@
 
 * Create an empty Git repository on GitHub.  Do not add a README or license at this point!
 ```
-https://github.com/cs485s17/GitHubExample.git
+https://gitlab.com/YOUR/GitLabExample.git
 ```
 
 * Create a new, empty directory to contain the VS Solution and local Git Repos:
@@ -101,11 +101,8 @@ Team Explorer
 Sync
 Publish to Remote Repository
 Get Started
-https://github.com/cs485s17/GitHubExample.git   <-- the SSH address does not work, only https://
+https://gitlab.com/YOUR/GitLabExample.git   <-- the SSH address does not work, only https://
 Publish
 ```
 
-You may be asked for you GitHub account/password.
-
-If you have Two Factor Authentication turned on for GitHub you MUST generate a Personal Access Token on GitHub and use the Personal Access Token instead of your password! 
-Generate Personal Access Tokens here:  https://github.com/settings/tokens  
+You may be asked for you GitLab account/password.
