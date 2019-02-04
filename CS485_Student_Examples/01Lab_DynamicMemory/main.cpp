@@ -27,7 +27,7 @@ int main ()
 
   std::cout << "s3: " << s3 << std::endl;
 
-  s3 += (s3 + "!!");
+  s3 = s3 + "!!";
 
   std::cout << "s3: " << s3 << std::endl;
 
