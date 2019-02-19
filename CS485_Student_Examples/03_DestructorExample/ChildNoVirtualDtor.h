@@ -17,11 +17,15 @@ class ChildNoVirtualDtor : public ParentNoVirtualDtor
 public:
 
   // inline the constructors
-  ChildNoVirtualDtor () {};
+  ChildNoVirtualDtor () {
+    std::cout << "ChildNoVirtualDtor::ctor()\n";
+  };
+
   ChildNoVirtualDtor (int x, char c) : ParentNoVirtualDtor (x)
   {
     mpCharVal = new char;
     *mpCharVal = c;
+    std::cout << "ChildNoVirtualDtor::ctor(" << *mpCharVal << ")\n";
   };
 
   ~ChildNoVirtualDtor ()

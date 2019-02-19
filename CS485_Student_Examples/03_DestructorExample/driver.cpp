@@ -23,12 +23,14 @@
 
 int main ()
 {
+  std::cout << "Allocate Parent Objects\n";
   ParentNoVirtualDtor cParentNoVDtor (1);
   ParentWithVirtualDtor cParentWithVDtor (2);
 
   ParentNoVirtualDtor *pcParentNoVDtor = nullptr;
   ParentWithVirtualDtor *pcParentWithVDtor = nullptr;
 
+  std::cout << "\nAllocate Child Objects\n";
   ChildNoVirtualDtor cChildNoVDtor (3, 'c');
   ChildWithVirtualDtor cChildWithVDtor (4, 'd');
 
@@ -39,7 +41,7 @@ int main ()
   pcChildNoVDtor = new ChildNoVirtualDtor (5, 'e');
   pcChildWithVDtor = new ChildWithVirtualDtor (6, 'f');
 
-  std::cout << "START FIRST DELETES\n";
+  std::cout << "\nSTART FIRST DELETES\n";
   delete pcChildNoVDtor;
   std::cout << std::endl;
   delete pcChildWithVDtor;

@@ -16,11 +16,15 @@ class ParentNoVirtualDtor
 public:
 
   // inline the constructors
-  ParentNoVirtualDtor () {};
+  ParentNoVirtualDtor () {
+    std::cout << "ParentNoVirtualDtor::ctor()\n";
+  };
   ParentNoVirtualDtor (int x) 
   {
     mpIntVal = new int;
     *mpIntVal = x;
+    std::cout << "ParentNoVirtualDtor::ctor(" << *mpIntVal << ")\n";
+
   };
 
   ~ParentNoVirtualDtor ()

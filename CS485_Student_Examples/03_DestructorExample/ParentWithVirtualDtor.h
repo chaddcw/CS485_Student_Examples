@@ -16,11 +16,15 @@ class ParentWithVirtualDtor
 public:
 
   // inline the constructors
-  ParentWithVirtualDtor () {};
+  ParentWithVirtualDtor () {
+    std::cout << "ParentWithVirtualDtor::ctor()\n";
+  };
   ParentWithVirtualDtor (int x)
   {
     mpIntVal = new int;
     *mpIntVal = x;
+    std::cout << "ParentWithVirtualDtor::ctor(" << *mpIntVal << ")\n";
+
   };
 
   virtual ~ParentWithVirtualDtor ()
