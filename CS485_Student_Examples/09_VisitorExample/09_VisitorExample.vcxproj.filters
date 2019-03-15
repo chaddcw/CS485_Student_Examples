@@ -66,4 +66,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="VisitorPatternExample.pdf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisitorPatternExample.uxf">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

@@ -158,6 +158,10 @@
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Manager.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="DoubleDispatchExample.pdf" />
+    <None Include="DoubleDispatchExample.uxf" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

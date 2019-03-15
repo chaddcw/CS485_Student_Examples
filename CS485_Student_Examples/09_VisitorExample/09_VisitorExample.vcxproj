@@ -165,6 +165,10 @@
     <ClCompile Include="SimpleContainer.cpp" />
     <ClCompile Include="Worker.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="VisitorPatternExample.pdf" />
+    <None Include="VisitorPatternExample.uxf" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
