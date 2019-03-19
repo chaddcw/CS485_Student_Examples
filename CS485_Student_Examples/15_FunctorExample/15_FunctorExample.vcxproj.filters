@@ -32,5 +32,8 @@
     <ClInclude Include="FilterFunctor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CountingLogFunctor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

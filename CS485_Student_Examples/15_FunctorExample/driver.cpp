@@ -12,6 +12,7 @@
 #include "StreamFunctor.h"
 #include "IntFunctor.h"
 #include "FilterFunctor.h"
+#include "CountingLogFunctor.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -67,6 +68,25 @@ void doWork (const LogFunctor &rcLog) {
 }
 
 //***************************************************************************
+// Function:    doCountingWork
+//
+// Description: Do work and log work to appropriate location
+//
+// Parameters:  rcLog - log to use
+//
+// Returned:    none
+//***************************************************************************
+
+void doCountingWork (CountingLogFunctor &rcLog) {
+
+  for (int i = 0; i < 10; ++i)
+  {
+    std::cout << rcLog (std::to_string (i*i));
+    std::cout << std::endl;
+  }
+}
+
+//***************************************************************************
 // Function:    main
 //
 // Description: Demonstrate functors
@@ -81,8 +101,13 @@ int main () {
   LogFunctor cTestLog ("Testing");
   LogFunctor cActualLog ("Actual");
 
+  CountingLogFunctor cCountingLog ("Count");
+
   doWork (cTestLog);
   doWork (cActualLog);
+
+  doCountingWork (cCountingLog);
+  doCountingWork (cCountingLog);
 
   ////
   std::vector<std::string> cVecOfValues;

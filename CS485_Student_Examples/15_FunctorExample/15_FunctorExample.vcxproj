@@ -142,6 +142,7 @@
     <ClCompile Include="driver.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CountingLogFunctor.h" />
     <ClInclude Include="FilterFunctor.h" />
     <ClInclude Include="IntFunctor.h" />
     <ClInclude Include="LogFunctor.h" />
