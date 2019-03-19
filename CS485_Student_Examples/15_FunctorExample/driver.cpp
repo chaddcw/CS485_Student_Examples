@@ -17,12 +17,34 @@
 #include <algorithm>
 #include <string>
 
+//***************************************************************************
+// Function:    isPrefix
+//
+// Description: Determine if the second parameter is a prefix of the first
+//
+// Parameters:  msg - string to check
+//              prefix - string to use for prefix
+//
+// Returned:    true if prefix is a prefix of msg, false otherwise
+//***************************************************************************
+
 bool isPrefix (std::string msg, std::string prefix) {
   return 0 == msg.find (prefix);
 }
 
-bool isSuffix (std::string msg, std::string prefix) {
-  return (msg.length() - prefix.length()) == msg.find (prefix);
+//***************************************************************************
+// Function:    isSuffix
+//
+// Description: Determine if the second parameter is a suffix of the first
+//
+// Parameters:  msg - string to check
+//              suffix - string to use for suffix
+//
+// Returned:    true if suffix is a suffix of msg, false otherwise
+//***************************************************************************
+
+bool isSuffix (std::string msg, std::string suffix) {
+  return (msg.length () - suffix.length ()) == msg.find (suffix);
 }
 
 //***************************************************************************
