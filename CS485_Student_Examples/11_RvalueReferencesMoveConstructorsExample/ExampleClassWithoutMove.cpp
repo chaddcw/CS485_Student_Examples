@@ -70,7 +70,7 @@ ExampleClassWithoutMove::ExampleClassWithoutMove (const ExampleClassWithoutMove 
 // Returned:    a reference to *this
 //***************************************************************************
 
-ExampleClassWithoutMove & ExampleClassWithoutMove::operator=(const ExampleClassWithoutMove &rcObj)
+/* ExampleClassWithoutMove & ExampleClassWithoutMove::operator=(const ExampleClassWithoutMove &rcObj)
 {
   std::cout << "op=\n";
   mX = rcObj.mX;
@@ -90,7 +90,32 @@ ExampleClassWithoutMove & ExampleClassWithoutMove::operator=(const ExampleClassW
 
   
   return *this;
-}
+} */
+
+//***************************************************************************
+// Function:    ExampleClassWithoutMove
+//
+// Description: Copy assignment operator with CopyAndSwap
+//
+// Parameters:  cObj - the object to copy
+//
+// Returned:    a reference to *this
+//***************************************************************************
+
+ExampleClassWithoutMove & ExampleClassWithoutMove::operator=(
+  ExampleClassWithoutMove cObj)
+  {
+    std::cout << "op=\n";
+
+    using std::swap;
+
+    swap(mX, cObj.mX);
+    swap(mY, cObj.mY);
+    swap(pInt, cObj.pInt);
+
+    return *this;
+  }
+
 
 //***************************************************************************
 // Function:    operator+
