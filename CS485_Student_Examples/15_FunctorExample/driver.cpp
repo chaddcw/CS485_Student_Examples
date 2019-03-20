@@ -87,6 +87,25 @@ void doCountingWork (CountingLogFunctor &rcLog) {
 }
 
 //***************************************************************************
+// Function:    doWorkTemplate
+//
+// Description: Do work and log work to appropriate location
+//
+// Parameters:  rcLog - log to use
+//
+// Returned:    none
+//***************************************************************************
+template<class T>
+void doWorkTemplate (T &rcLog) {
+
+  for (int i = 0; i < 10; ++i)
+  {
+    std::cout << rcLog (std::to_string (i*i));
+    std::cout << std::endl;
+  }
+}
+
+//***************************************************************************
 // Function:    main
 //
 // Description: Demonstrate functors
@@ -109,6 +128,8 @@ int main () {
   doCountingWork (cCountingLog);
   doCountingWork (cCountingLog);
 
+  doWorkTemplate (cTestLog);
+  doWorkTemplate (cCountingLog);
   ////
   std::vector<std::string> cVecOfValues;
   
