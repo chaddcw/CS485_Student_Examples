@@ -13,8 +13,98 @@
 #include <vector>
 
 #include <iostream>
-#include "vld.h"
+//#include "vld.h"
 
+ExampleClass copyBackExampleClass()
+{
+  ExampleClass cRetVal(1,2,3) ;
+
+  return cRetVal;
+}
+
+ExampleClassWithoutMove copyBackExampleClassWithoutMove()
+{
+  ExampleClassWithoutMove cRetVal(1,2,3);
+
+  return cRetVal;  
+}
+
+void callFunctions()
+{
+  ExampleClass cOriginalExampleClass(4,5,6);
+  ExampleClassWithoutMove cOriginalExampleClassWOMove(4,5,6);
+
+  std::cout << "\n\ncopyBackStart\n";
+
+  std::cout << "cOriginalExampleClass = copyBackExampleClass();\n";
+
+  cOriginalExampleClass = copyBackExampleClass();
+
+  std::cout << "cOriginalExampleClassWOMove = copyBackExampleClassWithoutMove();\n";
+  cOriginalExampleClassWOMove = copyBackExampleClassWithoutMove();
+
+  std::cout << "\ncopyBackDone\n\n";
+
+  // clang --version
+  // Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+  // RESULTS WITHOUT COPY AND SWAP in cOriginalExampleClassWOMove
+  // copyBackStart
+  // cOriginalExampleClass = copyBackExampleClass();
+  // ctor3
+  // NEW!
+  // mop=
+  // cOriginalExampleClassWOMove = copyBackExampleClassWithoutMove();
+  // ctor3
+  // NEW!
+  // op=
+  // NEW!
+  // copyBackDone
+
+  // RESULTS WITH COPY AND SWAP in cOriginalExampleClassWOMove
+  // copyBackStart
+  // cOriginalExampleClass = copyBackExampleClass();
+  // ctor3
+  // NEW!
+  // mop=
+  // cOriginalExampleClassWOMove = copyBackExampleClassWithoutMove();
+  // ctor3
+  // NEW!
+  // op=
+  // copyBackDone
+
+
+  // Visual Studio 2017
+  // RESULTS WITHOUT COPY AND SWAP in cOriginalExampleClassWOMove
+  // copyBackStart
+  // cOriginalExampleClass = copyBackExampleClass();
+  // ctor3
+  // NEW!
+  // mctor
+  // mop=
+  // cOriginalExampleClassWOMove = copyBackExampleClassWithoutMove();
+  // ctor3
+  // NEW!
+  // cctor
+  // NEW!
+  // op=
+  // NEW!
+  // copyBackDone
+
+  // RESULTS WITH COPY AND SWAP in cOriginalExampleClassWOMove
+  // copyBackStart
+  // cOriginalExampleClass = copyBackExampleClass();
+  // ctor3
+  // NEW!
+  // mctor
+  // mop=
+  // cOriginalExampleClassWOMove = copyBackExampleClassWithoutMove();
+  // ctor3
+  // NEW!
+  // cctor
+  // NEW!
+  // op=
+  // copyBackDone
+}
 int main ()
 {
 
@@ -127,5 +217,8 @@ int main ()
 
   std::cout << std::endl;
   std::cout << std::endl;
+
+  callFunctions();
+
   return EXIT_SUCCESS;
 }

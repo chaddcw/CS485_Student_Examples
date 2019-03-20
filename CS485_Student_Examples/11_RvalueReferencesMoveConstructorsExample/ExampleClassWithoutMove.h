@@ -34,7 +34,10 @@ public:
   
   ~ExampleClassWithoutMove () { delete pInt; };
 
-  ExampleClassWithoutMove & operator=(const ExampleClassWithoutMove &rcObj);
+//  ExampleClassWithoutMove & operator=(const ExampleClassWithoutMove &rcObj);
+
+  // CopyAndSwap
+  ExampleClassWithoutMove & operator=(ExampleClassWithoutMove cObj);
 
   ExampleClassWithoutMove operator+(const ExampleClassWithoutMove &rcObj);
 
