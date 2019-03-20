@@ -183,5 +183,22 @@ int main () {
     }
   }
 
+  int state = 0;
+
+  auto lambdaWithState = [&state](auto &rStr) mutable
+  {
+    std::cout << "Lambda: " << state++ << " " << rStr << std::endl;
+  };
+
+  // simulate functor with lambda
+  std::for_each (cVecOfValues.begin (), cVecOfValues.end (),
+    lambdaWithState
+  );
+
+  // simulate functor with lambda
+  std::for_each (cVecOfValues.begin (), cVecOfValues.end (),
+    lambdaWithState
+  );
+
   return EXIT_SUCCESS;
 }
