@@ -1,3 +1,6 @@
+[CS 485: Advanced Object Oriented Design](http://zeus.cs.pacificu.edu/chadd/cs485s19)
+
+
 # CS485_Student_Examples
 
 ## How can a student keep their own personal fork in sync with this repository ##
