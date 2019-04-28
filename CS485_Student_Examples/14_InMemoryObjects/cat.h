@@ -33,7 +33,7 @@ class cat : public animal
     int nonVirtualFunction ();
 private:
   int mWeight;
-  int mTeeth;
+  int mTeeth = 30;
 };
 
 
