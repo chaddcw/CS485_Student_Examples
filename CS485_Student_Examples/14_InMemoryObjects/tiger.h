@@ -25,8 +25,10 @@ public:
   void hi ();
 
   int nonVirtualFunction ();
+
+  int getStripes () { return mStripes; }
 private:
-  int mStripes;
+  int mStripes = 11;
 };
 
 

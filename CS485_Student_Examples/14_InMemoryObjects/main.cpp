@@ -9,6 +9,7 @@ Purpose:		Demonstrate gcc's C++ name mangling and virtual function table
 
 #include "animal.h"
 #include "cat.h"
+#include "tiger.h"
 #include <iostream>
 
 int foo (int x)
@@ -37,6 +38,16 @@ void testRTTI (animal *pcAnimal)
 
   std::cout << typeid(*pcAnimal).raw_name () << std::endl;
   std::cout << "\nEND TEST RTTI\n\n";
+
+  // runtime error.
+  //std::cout << (dynamic_cast<tiger *>(pcAnimal))->getStripes ();
+
+  cat *pcCat = new cat (8);
+
+  // up cast
+  (dynamic_cast<animal*>(pcCat))->hi ();
+
+  delete pcCat;
 }
 
 
